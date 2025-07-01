@@ -1,0 +1,28 @@
+---
+import Head from "../components/Head.astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+	<Head />
+
+	<body
+		class="prose dark:prose-invert prose-headings:font-bold
+  prose-h1:font-bold prose-h1:text-2xl prose-img:rounded-xl
+ bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50
+	antialiased max-w-none"
+	>
+		<header
+			class="bg-neutral-50/30 dark:bg-neutral-900/30 backdrop-blur-sm sticky top-0 z-10"
+		>
+			<div class="max-w-4xl mx-auto max-md:px-4 flex items-center gap-2">
+				<h2 class="font-black text-3xl">tich</h2>
+			</div>
+		</header>
+
+		<main class="max-w-4xl mx-auto max-md:px-4 my-12">
+			<slot />
+		</main>
+	</body>
+</html>
