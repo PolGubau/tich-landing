@@ -1,5 +1,10 @@
 ---
 import { Font } from "astro:assets";
+type Props = {
+  title?: string;
+};
+
+const { title = "Tich - Track your tutoring sessions" } = Astro.props as Props;
 ---
 
 <head>
@@ -9,7 +14,11 @@ import { Font } from "astro:assets";
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
-  <title>Introducing Tich!</title>
+  <title>{title}</title>
+  <meta
+    name="description"
+    content="Tich helps you track your private lessons, earnings and schedule – all offline, locally."
+  />
 </head>
 
 <style is:global>

@@ -1,2 +1,15 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+
+
+.styled {
+  @apply prose dark:prose-invert prose-headings:font-bold
+  prose-h1:font-bold prose-h1:text-2xl prose-img:rounded-xl
+	 max-w-none
+}
+
+.colors {
+  @apply bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50
+	antialiased;
+}

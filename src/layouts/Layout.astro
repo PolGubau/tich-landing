@@ -1,28 +1,39 @@
 ---
+import background from "../assets/background.svg";
 import Head from "../components/Head.astro";
 import "../styles/global.css";
+type Props = {
+	title?: string;
+};
+
+const { title } = Astro.props as Props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<Head />
-
-	<body
-		class="prose dark:prose-invert prose-headings:font-bold
-  prose-h1:font-bold prose-h1:text-2xl prose-img:rounded-xl
- bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50
-	antialiased max-w-none"
-	>
+	<Head title={title} />
+	<body class="colors">
+		<img id="background" src={background.src} alt="" fetchpriority="high" />
 		<header
-			class="bg-neutral-50/30 dark:bg-neutral-900/30 backdrop-blur-sm sticky top-0 z-10"
+			class="bg-neutral-50/30 dark:bg-neutral-900/30 backdrop-blur-sm sticky top-0 z-10 styled"
 		>
-			<div class="max-w-4xl mx-auto max-md:px-4 flex items-center gap-2">
-				<h2 class="font-black text-3xl">tich</h2>
+			<div class="max-w-6xl mx-auto max-md:px-4 flex items-center gap-2">
+				<h2 class="font-black text-2xl">tich</h2>
 			</div>
 		</header>
 
 		<main class="max-w-4xl mx-auto max-md:px-4 my-12">
 			<slot />
 		</main>
-	</body>
+	</body><style>
+		#background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			filter: blur(100px);
+		}
+	</style>
 </html>

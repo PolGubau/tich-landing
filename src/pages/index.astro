@@ -1,11 +1,76 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<!-- Hero -->
+	<section
+		class="min-h-screen flex flex-col items-center pt-72 px-4 text-center"
+	>
+		<h1 class="text-9xl font-bold mb-4">tich</h1>
+		<p class="text-2xl text-pretty opacity-70 max-w-xl mb-6">
+			The minimalist app to track your tutoring sessions, students, and
+			earnings. 100% local, no accounts, no cloud.
+		</p>
+		<a
+			href="#features"
+			class="bg-black text-white px-6 py-3 rounded-2xl shadow hover:scale-105 transition"
+		>
+			Learn More
+		</a>
+	</section>
+
+	<!-- Features -->
+	<section id="features" class="py-20 px-4">
+		<div class="max-w-5xl mx-auto text-center">
+			<h2 class="text-3xl font-semibold mb-12">What Tich does for you</h2>
+			<div class="grid md:grid-cols-3 gap-4">
+				<div
+					class="bg-white dark:bg-black p-6 rounded-2xl shadow hover:shadow-lg transition"
+				>
+					<h3 class="font-bold text-2xl mb-3">Student Tracking</h3>
+					<p class="text-sm opacity-70 text-pretty">
+						Keep a simple list of your students and access their class history
+						anytime.
+					</p>
+				</div>
+				<div
+					class="bg-white dark:bg-black p-6 rounded-2xl shadow hover:shadow-lg transition"
+				>
+					<h3 class="font-bold text-2xl mb-3">Class Scheduling</h3>
+					<p class="text-sm opacity-70 text-pretty">
+						Visualize when and with whom you have classes. Never forget a
+						session.
+					</p>
+				</div>
+				<div
+					class="bg-white dark:bg-black p-6 rounded-2xl shadow hover:shadow-lg transition"
+				>
+					<h3 class="font-bold text-2xl mb-3">Income Overview</h3>
+					<p class="text-sm opacity-70 text-pretty">
+						Track how much you've earned, per student or globally, in just a
+						tap.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-20 px-4 text-center">
+		<h2 class="text-3xl font-bold mb-6">
+			Ready to simplify your tutoring life?
+		</h2>
+		<p class="text-lg opacity-70 mb-8">
+			Tich is free and respects your privacy. No login. No nonsense.
+		</p>
+		<a
+			href="#"
+			class="bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition"
+			>Coming soon to Google Play</a
+		>
+	</section>
 </Layout>
